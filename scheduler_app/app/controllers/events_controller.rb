@@ -18,13 +18,13 @@ class EventsController < ApplicationController
   #update
   def update
     @event = Event.find(params[:id])
-    @event.update(house_params)
-    redirect_to houses_path(@event)
+    @event.update(event_params)
+    redirect_to month_path(@event)
   end
 
   def create
     redirect_to root_path(@event)
-    @event = Event.create!(house_params)
+    @event = Event.create!(event_params)
   end
 
   def edit
@@ -35,13 +35,13 @@ class EventsController < ApplicationController
     redirect_to root_path
     @event = Event.find(params[:id])
     @event.destroy
-    redirect_to houses_path
+    redirect_to @event.month
   end
 
     private
 
     def event_params
-      params.require(:character).permit(:name)
+      params.require(:event).permit(:name)
     end
 
 end

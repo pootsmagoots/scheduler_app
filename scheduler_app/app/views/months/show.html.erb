@@ -1,3 +1,15 @@
+<h1><%= @month.name %> </h1>
+
+<div class="month">
+
+
+<%= link_to "Edit Schedule", edit_month_path(@month)%>
+
+<%= link_to "Delete Schedule", month_path(@month), method: :delete %>
+
+</div>
+
+
 <%= month_calendar do |date| %>
   <%= date %>
   <% end %>

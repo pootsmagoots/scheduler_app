@@ -32,7 +32,7 @@ def destroy
   redirect_to root_path
   @month = Month.find(params[:id])
   @month.destroy
-  redirect_to houses_path
+  redirect_to month_path
 end
 
   private

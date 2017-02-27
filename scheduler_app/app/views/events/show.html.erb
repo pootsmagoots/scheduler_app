@@ -1,10 +1,6 @@
 <h2><%= @event.name %></h2>
-<h2><%= link_to "Edit #{@event.month.name}", edit_month_path(@event.month)%></h2>
+<h3>Month <%= @month.name %></h3>
 
-<%= link_to "Edit Event", edit_character_path(@name)%>
 
-<%= link_to "Delete Event", character_path(@name), method: :delete %>
-
-<div class="Event">
-
-</div
+<%= month_calendar do |date| %>
+  <%= date %>
