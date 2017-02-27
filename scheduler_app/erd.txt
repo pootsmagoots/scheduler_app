@@ -1,0 +1,17 @@
+________________________________________________
+|         EVENTS          |        MONTH       |
+|        id               |        id          |
+|        name             |       name         |
+|        img_url          |       img_url      |
+|                         |                    |
+|                         |                    |
+|                         |                    |
+|                         |                    |
+|                         |                    |
+|_________________________|____________________|
+
+
+
+                    USER STORIES
+      User should be able to schedule events
+      User should be able to delete eventss
