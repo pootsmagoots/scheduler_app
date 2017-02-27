@@ -1,4 +1,6 @@
-<h2>Months!</h2>
-<%= month_calendar do |date| %>
-  <%= date %>
+<h2>Pick a type of schedule</h2>
+<h1><%= @months.each do |month| %></h1>
+<div class = "house">
+  <h2><%= link_to month.name, month %></h2>
+</div>
 <% end %>

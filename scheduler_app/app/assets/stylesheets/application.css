@@ -22,7 +22,7 @@
    table {
      -webkit-border-horizontal-spacing: 0px;
      -webkit-border-vertical-spacing: 0px;
-     background-color: rgba(18,23,252);
+     background-color: rgba(18,23,252,0);
      border: 1px solid rgb(221, 221, 221);
      border-collapse: collapse;
      box-sizing: border-box;

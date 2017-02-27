@@ -11,7 +11,7 @@ Event.destroy_all
 
 
 
-Month.create(name: "Buisness Schedule")
+Month.create(name: "Business Schedule")
 Month.create(name: "Vacation Schedule")
 
 
