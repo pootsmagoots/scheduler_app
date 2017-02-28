@@ -13,6 +13,7 @@ Event.destroy_all
 
 Month.create(name: "Business Schedule")
 Month.create(name: "Vacation Schedule")
+Month.create(name: "Workout Schedule")
 
 
 Event.create(name: "Birthday")

@@ -14,7 +14,9 @@
  *= require_self
  */
 
-
+ .month {
+   color: red;
+ }
 
  .simple-calendar {
    color: blue;
