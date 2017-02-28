@@ -7,7 +7,7 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+    <div class= "front">
     <%= link_to "Sign Up", new_user_registration_path %>
     <% if !current_user %>
     <%= link_to "Sing Up", new_user_registration_path %>
@@ -16,9 +16,12 @@
     <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
       <%= current_user.email %>
     <% end %>
+  </div>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-
+  <body>
+    
   </body>
+
     <%= yield %>
 </html>

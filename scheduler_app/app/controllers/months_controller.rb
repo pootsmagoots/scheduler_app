@@ -6,10 +6,10 @@ def index
 
  def show
   @month = Month.find(params[:id])
+
 end
 
 def new
-  redirect_to root_path
   @month = Month.new
 end
 
@@ -20,8 +20,9 @@ def update
 end
 
 def create
+  @month = current_user.months.create!(month_params)
   redirect_to root_path(@month)
-  @month = Month.create!(month_params)
+  # @month = Month.create!(month_params)
 end
 
 def edit
@@ -29,9 +30,15 @@ def edit
 end
 
 def destroy
-  redirect_to root_path
   @month = Month.find(params[:id])
-  @month.destroy
+  if @month.user == current_user
+    @month.destroy
+  else
+    flash[:alert] = " You can not delete that!! STOP!"
+  end
+  # redirect_to root_path
+  # @month = Month.find(params[:id])
+  # @month.destroy
   redirect_to month_path
 end
 

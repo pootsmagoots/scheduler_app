@@ -14,8 +14,22 @@
  *= require_self
  */
 
+.front {
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
+}
+
+body {
+  background-image: url("https://www.magentocommerce.com/magento-connect/media/catalog/product/cache/9/image/9df78eab33525d08d6e5fb8d27136e95/a/o/aoe_magento_modules_-_scheduler_1.jpg");
+ background-size: cover;
+ background-repeat: no-repeat;
+
+  color: magenta;
+}
+
  .month {
-   color: red;
+   color: blue;
  }
 
  .simple-calendar {

@@ -1,7 +1,8 @@
+<h2> Add A New Schedule <%= link_to "(+)", new_month_path %></h2>
+</div>
 <body class = "month">
 <h2>Pick a type of schedule</h2>
 <h1><% @months.each do |month| %></h1>
   <h2><%= link_to month.name, month %></h2>
 </body>
-
 <% end %>
