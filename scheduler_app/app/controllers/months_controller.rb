@@ -39,7 +39,7 @@ def destroy
   # redirect_to root_path
   # @month = Month.find(params[:id])
   # @month.destroy
-  redirect_to month_path
+  redirect_to months_path
 end
 
   private

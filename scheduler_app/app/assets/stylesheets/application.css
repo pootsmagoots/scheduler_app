@@ -29,17 +29,17 @@ body {
 }
 
  .month {
-   color: blue;
+   color: magenta;
  }
 
  .simple-calendar {
-   color: blue;
+   color: brown;
  }
    table {
      -webkit-border-horizontal-spacing: 0px;
      -webkit-border-vertical-spacing: 0px;
      background-color: rgba(18,23,252,0);
-     border: 1px solid rgb(221, 221, 221);
+     border: 1px solid rgba(221, 221, 221,0.5);
      border-collapse: collapse;
      box-sizing: border-box;
      max-width: 100%;
