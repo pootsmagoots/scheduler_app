@@ -27,6 +27,12 @@ end
 
 def edit
   @month = Month.find(params[:id])
+  if @month.user == current_user
+    @month.destroy
+  else
+    flash[:alert] = "You can not edit that!! STOP!"
+  end
+  redirect_to months_path
 end
 
 def destroy

@@ -15,7 +15,6 @@ class EventsController < ApplicationController
   #new
   def new
     @event = Event.new
-
   end
 
   #update
@@ -27,7 +26,7 @@ class EventsController < ApplicationController
 
   def create
   @event = Event.create!(event_params)
-    # @event = Event.find(params[:month_id])
+  @event = Event.find(params[:month_id])
   redirect_to @event.month
   end
 
