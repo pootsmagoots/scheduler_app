@@ -1,7 +1,20 @@
+
+<style>
+.month{
+  color: #F48024;
+  background-image: url("http://19499-presscdn.pagely.netdna-cdn.com/wp-content/uploads/2017/01/2017-taxes.jpg");
+  height: 370px;
+  width: 1000px;
+  padding-top: 50px;
+
+}
+
+</style>
+
+
+<div class= "month">
 <h1><%= @month.name %> </h1>
 <h2> Add A New Event <%= link_to "(+)", new_event_path %></h2>
-
-<div class="month">
 
 
 <%= link_to "Edit Schedule", edit_month_path(@month)%>
