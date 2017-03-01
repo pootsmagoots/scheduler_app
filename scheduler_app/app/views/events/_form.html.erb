@@ -1,0 +1,9 @@
+<%= form_for([@month, @event]) do |f| %>
+  <p class="alert"><%= @month.errors.full_messages.first if @event.errors.any? %></p>
+
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.submit %>
+
+<% end %>

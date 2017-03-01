@@ -5,12 +5,19 @@
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= favicon_link_tag 'http://www.goleta.k12.ca.us/schoolsites/lapatera/wp-content/uploads/2017/01/calendar.png' %>
   </head>
-
+  <% if !current_user %>
+  <style>
+  body {
+    background-image: url("http://www.dipotepede.org/wp-content/uploads/2015/12/aoe_scheduler_512ff5e89bb95c8dfed357311d5be09c_scheduler.png");
+    background-attachment: fixed;
+  }
+  </style>
+  <%end%>
     <div class= "front">
-    <%= link_to "Sign Up", new_user_registration_path %>
     <% if !current_user %>
-    <%= link_to "Sing Up", new_user_registration_path %>
+    <%= link_to "Sign Up", new_user_registration_path %>
     <%= link_to "Sign in", new_user_session_path %>
     <% else %>
     <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
@@ -19,9 +26,5 @@
   </div>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-  <body>
-    
-  </body>
-
     <%= yield %>
 </html>

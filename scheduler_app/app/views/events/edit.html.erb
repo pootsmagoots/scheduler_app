@@ -6,5 +6,7 @@
 
 
  <%= f.submit %>
+ <%= link_to 'Delete!', month_event_path(@month, @event), method: :delete, class: 'delete' %>
 
+<%= render 'form' %>
  <% end %>
