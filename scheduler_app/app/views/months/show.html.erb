@@ -12,9 +12,10 @@
 </style>
 
 
+
 <div class= "month">
 <h1><%= @month.name %> </h1>
-<h2> Add A New Event <%= link_to "(+)", new_event_path %></h2>
+<h2> Add A New Event <%= link_to "(+)", new_month_event_path(@month) %></h2>
 
 
 <%= link_to "Edit Schedule", edit_month_path(@month)%>
@@ -22,8 +23,20 @@
 <%= link_to "Delete Schedule", month_path(@month), method: :delete %>
 
 
-
 </div>
+
+<ul>
+  <% @events.each do |event| %>
+  <li>
+    <%= link_to event.name %>
+  </li>
+    <% end %>
+</ul>
+
+
+<%= link_to "Edit Event", edit_month_event_path(@month)%>
+
+<%= link_to "Delete Event", month_event_path(@month), method: :delete %>
 
 
 <%= month_calendar do |date| %>

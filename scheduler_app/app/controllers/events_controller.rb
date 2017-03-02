@@ -14,6 +14,7 @@ class EventsController < ApplicationController
 
   #new
   def new
+    @month = Month.find(params[:month_id])
     @event = Event.new
   end
 
@@ -25,20 +26,33 @@ class EventsController < ApplicationController
   end
 
   def create
-  @event = Event.create!(event_params)
-  @event = Event.find(params[:month_id])
-  redirect_to @event.month
+  @month = Month.find(params[:month_id])
+  @month.events.create!(event_params)
+  redirect_to month_path(@month)
   end
 
   def edit
-    @event = Event.find(params[:id])
+    @month = event.find(params[:month_id])
+    if @event.user == current_user
+      @event.destroy
+    else
+      flash[:alert] = "You can not edit that!! STOP!"
+    end
+    redirect_to months_path
   end
 
   def destroy
-    redirect_to root_path
-    @event = Event.find(params[:id])
-    @event.destroy
-    redirect_to @event.month
+    @event = Event.find(params[:month_id])
+    if @event.user == current_user
+      @event.destroy
+    else
+      flash[:alert] = " You can not delete that!! STOP!"
+    end
+    # redirect_to root_path
+    # @month = Month.find(params[:id])
+    # @month.destroy
+    redirect_to months_path
+    end
   end
 
     private
@@ -46,5 +60,3 @@ class EventsController < ApplicationController
     def event_params
       params.require(:event).permit(:name)
     end
-
-end

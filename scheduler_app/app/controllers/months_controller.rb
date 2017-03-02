@@ -6,7 +6,7 @@ def index
 
  def show
   @month = Month.find(params[:id])
-
+  @events = @month.events
 end
 
 def new

@@ -14,4 +14,7 @@ ________________________________________________
 
                     USER STORIES
       User should be able to schedule events
-      User should be able to delete eventss
+      User should be able to delete events
+      User should be able to create months and name them
+      User should be able to select certain days on calendar
+      User should be able to schedule meetings
