@@ -32,13 +32,8 @@ class EventsController < ApplicationController
   end
 
   def edit
-    @month = event.find(params[:month_id])
-    if @event.user == current_user
-      @event.destroy
-    else
-      flash[:alert] = "You can not edit that!! STOP!"
-    end
-    redirect_to months_path
+  @month = Month.find(params[:month_id])
+  @event = Event.find(params[:id])
   end
 
   def destroy

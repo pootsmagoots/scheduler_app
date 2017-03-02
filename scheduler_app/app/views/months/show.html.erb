@@ -25,6 +25,10 @@
 
 </div>
 
+
+<%= link_to "Edit Event", edit_month_event_path(@month)%>
+
+<%= link_to "Delete Event", month_event_path(@month), method: :delete %>
 <ul>
   <% @events.each do |event| %>
   <li>
@@ -32,11 +36,6 @@
   </li>
     <% end %>
 </ul>
-
-
-<%= link_to "Edit Event", edit_month_event_path(@month)%>
-
-<%= link_to "Delete Event", month_event_path(@month), method: :delete %>
 
 
 <%= month_calendar do |date| %>
