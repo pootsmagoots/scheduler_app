@@ -1,4 +1,6 @@
 class MeetingsController < ApplicationController
+  # sick scaffold
+
   before_action :set_meeting, only: [:show, :edit, :update, :destroy]
 
   # GET /meetings

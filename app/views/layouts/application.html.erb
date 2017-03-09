@@ -7,6 +7,8 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= favicon_link_tag 'http://www.goleta.k12.ca.us/schoolsites/lapatera/wp-content/uploads/2017/01/calendar.png' %>
   </head>
+  <!-- yo this is dope -->
+  <!-- the better practice is define a class in application and then have a condition/ternary expression to apply the class if some condition is met, like current_user being logged in, in this case -->
   <% if !current_user %>
   <style>
   body {
