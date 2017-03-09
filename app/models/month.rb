@@ -1,4 +1,4 @@
 class Month < ActiveRecord::Base
-belongs_to :user
-has_many :events
+  belongs_to :user
+  has_many :events
 end
